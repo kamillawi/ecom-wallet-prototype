@@ -1,0 +1,12 @@
+<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="81.8182" height="71.8182" viewBox="0 0 81.8182 71.8182" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Box" clip-path="url(#clip0_0_423)">
+<rect id="Gift" x="7.72727" y="7.36364" width="66.3636" height="63.6364" rx="4.54545" fill="#E7DBFF" stroke="#0F0E0E" stroke-width="1.81818"/>
+<rect id="Lid" x="0.909091" y="7.36364" width="80" height="16.3636" rx="4.54545" fill="#E7DBFF" stroke="#0F0E0E" stroke-width="1.81818"/>
+<path id="Ribbon" d="M47.8182 1.09091L47.8182 71.0909L34.1818 71.0909L34.1818 1.09091L47.8182 1.09091Z" fill="#FF5B24" stroke="#0F0E0E" stroke-width="1.81818"/>
+</g>
+<defs>
+<clipPath id="clip0_0_423">
+<rect width="81.8182" height="71.8182" fill="white"/>
+</clipPath>
+</defs>
+</svg>

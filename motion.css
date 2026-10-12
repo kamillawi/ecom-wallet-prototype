@@ -1,0 +1,56 @@
+.wallet-glass{background:linear-gradient(160deg,rgba(255,255,255,.94),rgba(236,238,242,.75))!important;border:1px solid rgba(255,255,255,.95)!important;box-shadow:inset 0 1px 1px #fff,inset 0 -1px 2px #c9ccd344,0 3px 12px #33283e0a;backdrop-filter:blur(18px) saturate(145%);-webkit-backdrop-filter:blur(18px) saturate(145%);overflow:hidden;isolation:isolate;transition:box-shadow .25s,transform .25s}
+.wallet-glass::after{content:"";position:absolute;inset:1px;border:1px solid #ffffff75;border-radius:inherit;pointer-events:none}
+.wallet-glass:hover{box-shadow:inset 0 1px 1px #fff,0 5px 18px #33283e14;transform:translateY(-1px)}
+.wallet-glass:active{transform:scale(.98)}
+.wallet-glass>div:first-child{background:transparent!important}
+.wallet-sparkle{transform-origin:center;animation:wallet-twinkle 3.2s ease-in-out infinite;will-change:transform}
+@keyframes wallet-twinkle{0%,56%,100%{transform:scale(1) rotate(0);opacity:1}68%{transform:scale(.68) rotate(-14deg);opacity:.5}82%{transform:scale(1.36) rotate(12deg);opacity:1}92%{transform:scale(.94) rotate(-4deg)}}
+.vipps-transfer{position:absolute;inset:0;z-index:12;background:radial-gradient(ellipse at 50% 45%,#fffaf3 0,#f4ecff 65%,#e7dbff 100%);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:20px;pointer-events:auto}
+.vipps-transfer img{width:128px;height:32px;object-fit:contain;animation:wallet-pop .5s cubic-bezier(.2,.9,.3,1.3) both}
+.vipps-transfer p{font-size:16px;color:#6e6a69}
+.vipps-transfer .orbit-star{position:absolute;color:#ff5b24;font-size:24px;animation:wallet-orbit .8s ease-out both;left:50%;top:45%;--a:0deg}
+.vipps-transfer .orbit-star:nth-of-type(2){--a:90deg}.vipps-transfer .orbit-star:nth-of-type(3){--a:180deg}.vipps-transfer .orbit-star:nth-of-type(4){--a:270deg}
+@keyframes wallet-pop{from{opacity:0;transform:scale(.65)}to{opacity:1;transform:scale(1)}}
+@keyframes wallet-orbit{0%{opacity:0;transform:rotate(var(--a)) translateX(20px) scale(.3)}50%{opacity:1}100%{opacity:0;transform:rotate(calc(var(--a) + 40deg)) translateX(116px) scale(1.2)}}
+.wallet-card-window{touch-action:pan-y;user-select:none;-webkit-user-select:none;cursor:grab;overflow:hidden!important;position:relative!important;height:173px!important;width:370px!important;display:block!important}
+.wallet-card-window.dragging{cursor:grabbing}
+.wallet-card-slide{position:absolute!important;left:0!important;top:0!important;width:183px!important;height:162px!important;display:flex!important;flex-direction:column!important;align-items:center!important;justify-content:center!important;gap:7px!important;transition:transform .38s cubic-bezier(.22,.8,.22,1),opacity .25s;transform-origin:center;will-change:transform;cursor:pointer}
+.dragging .wallet-card-slide{transition:none}
+.wallet-card-slide img{pointer-events:none;-webkit-user-drag:none}
+.wallet-card-slide:focus-visible{outline:2px solid #654399;outline-offset:-2px;border-radius:16px}
+.wallet-card-dots{position:absolute;display:flex;align-items:center;justify-content:center;gap:7px;bottom:0;left:0;right:0;height:10px}
+.wallet-card-dot{border:0;background:#d9d5d3;width:5px;height:5px;padding:0;border-radius:50%;transition:width .25s,background .25s;cursor:pointer}
+.wallet-card-dot[aria-current="true"]{width:16px;background:#ff5b24;border-radius:4px}
+.wallet-switch{opacity:1!important;cursor:pointer;overflow:visible!important}
+.wallet-switch>img{display:none!important}
+.wallet-switch .switch-track{position:absolute;inset:0;border-radius:99px;border:2px solid #111;background:#ff5b24;transition:background .35s;box-sizing:border-box}
+.wallet-switch .switch-knob{position:absolute;top:2px;left:2px;width:calc(22.75px - 8px);height:calc(22.75px - 8px);border-radius:50%;background:white;box-shadow:0 1px 3px #0003;transform:translateX(29.25px);transition:transform .42s cubic-bezier(.24,1.25,.38,1)}
+.wallet-switch[aria-checked="false"] .switch-track,.wallet-switch.preview-off .switch-track{background:#d6d3d2}
+.wallet-switch[aria-checked="false"] .switch-knob,.wallet-switch.preview-off .switch-knob{transform:translateX(0)}
+.wallet-sun{display:inline-block;transform-origin:center;animation:wallet-sunshine 5s ease-in-out infinite}
+@keyframes wallet-sunshine{0%,75%,100%{transform:rotate(0) scale(1)}85%{transform:rotate(35deg) scale(1.2)}93%{transform:rotate(-12deg) scale(1.08)}}
+.saving-active .wallet-gift{animation:wallet-gift-hop 1.2s ease-in-out both}
+.saving-active .wallet-ribbon{animation:wallet-ribbon-wiggle 1.2s ease-in-out both;transform-origin:50% 75%}
+.saving-active .wallet-savings-progress{animation:wallet-progress 1s cubic-bezier(.2,.75,.3,1) both;transform-origin:left}
+.saving-active .wallet-plane{animation:wallet-plane-trip 1.4s ease-in-out both}
+.wallet-plane{display:inline-block}
+@keyframes wallet-gift-hop{0%,100%{transform:translateY(0) rotate(0)}25%{transform:translateY(-6px) rotate(-4deg)}55%{transform:translateY(1px) rotate(4deg)}75%{transform:translateY(-3px) rotate(-2deg)}}
+@keyframes wallet-ribbon-wiggle{0%,100%{transform:rotate(0)}30%{transform:rotate(-8deg) translateY(-2px)}60%{transform:rotate(7deg) translateY(-1px)}}
+@keyframes wallet-progress{from{transform:scaleX(.05)}to{transform:scaleX(1)}}
+@keyframes wallet-plane-trip{0%,100%{transform:translate(0,0) rotate(0)}40%{transform:translate(8px,-5px) rotate(-12deg)}70%{transform:translate(3px,-2px) rotate(5deg)}}
+.saving-spark{position:absolute;right:55px;top:54px;color:#ff5b24;font-size:14px;pointer-events:none;animation:wallet-save-burst .85s ease-out forwards;--dx:0px;--dy:-40px}
+@keyframes wallet-save-burst{from{opacity:1;transform:translate(0,0) scale(.6)}to{opacity:0;transform:translate(var(--dx),var(--dy)) scale(1.2)}}
+#pay button:disabled{background:#f1efee!important;color:#918b88!important;cursor:default}
+.motion-status{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+.wallet-overview-card{cursor:pointer}
+.wallet-overview-link{font-size:14px!important;line-height:17px!important;font-weight:500;display:inline-block;transform-origin:left center}
+.overview-cue .wallet-overview-link{animation:wallet-overview-pulse 2.8s ease-in-out 2}
+.overview-cue .wallet-overview-badge{animation:wallet-overview-bounce 2.8s ease-in-out 2;transform-origin:center}
+.overview-cue .wallet-overview-ring{animation:wallet-overview-turn 2.8s ease-in-out 2;transform-origin:center}
+.wallet-overview-card:hover .wallet-overview-link{transform:scale(1.06)}
+.wallet-overview-card:hover .wallet-overview-badge{animation:wallet-overview-bounce 1.2s ease-in-out 1}
+@keyframes wallet-overview-pulse{0%,20%,70%,100%{transform:scale(1)}36%,50%{transform:scale(1.1)}}
+@keyframes wallet-overview-bounce{0%,20%,70%,100%{transform:translateY(0) scale(1)}36%{transform:translateY(-3px) scale(1.08)}50%{transform:translateY(-1px) scale(1.04)}}
+@keyframes wallet-overview-turn{0%,20%,70%,100%{transform:rotate(0)}36%{transform:rotate(12deg)}50%{transform:rotate(-6deg)}}
+@media(prefers-reduced-motion:reduce){.overview-cue .wallet-overview-link,.overview-cue .wallet-overview-badge,.overview-cue .wallet-overview-ring,.wallet-overview-card:hover .wallet-overview-badge{animation:none!important}.wallet-overview-card:hover .wallet-overview-link{transform:none}}
+@media(prefers-reduced-motion:reduce){.wallet-sparkle,.wallet-sun,.saving-active .wallet-gift,.saving-active .wallet-ribbon,.saving-active .wallet-savings-progress,.saving-active .wallet-plane,.vipps-transfer img,.vipps-transfer .orbit-star,.saving-spark{animation:none!important}.wallet-card-slide,.wallet-card-dot,.switch-knob,.switch-track,.wallet-glass{transition:none!important}}
